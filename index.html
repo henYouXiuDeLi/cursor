@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <div class="logo"><span class="highlight">Yang</span>Dev</div>
+      <div class="nav-links">
+        <a href="#home">首页</a>
+        <a href="#about">关于我</a>
+        <a href="#contact">联系我</a>
+      </div>
+    </nav>
+
+    <!-- 主展示区 -->
+    <section id="hero" class="hero-section">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <!-- 轮播图片将通过 JavaScript 动态添加 -->
+        </div>
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="hero-text">
+        <h1>你好，我是<span class="highlight">杨英杰</span></h1>
+        <p>专注于创造优雅数字体验的全栈开发者</p>
+        <div class="hero-buttons">
+          <button class="primary-btn">查看作品</button>
+          <button class="secondary-btn">下载简历</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about-section">
+      <h2>关于我</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>热爱编程与创新，专注于打造优秀的用户体验。</p>
+          <div class="skills-container">
+            <h3>技能专长</h3>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <span class="skill-name">前端开发</span>
+                <div class="bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">后端开发</span>
+                <div class="bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">UI/UX设计</span>
+                <div class="bar">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚社交媒体链接 -->
+    <footer class="footer">
+      <div class="social-links">
+        <a
+          href="https://blog.csdn.net/yyj888999?type=blog"
+          class="social-icon"
+          target="_blank"
+        >
+          <span class="csdn-icon">CSDN</span>
+        </a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <button class="contact-btn">联系我</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,326 @@
+:root {
+    --primary-color: #8be9fd;
+    --secondary-color: #bd93f9;
+    --text-color: #f8f8f2;
+    --background-color: #282a36;
+    --footer-color: #1a1b24;
+    --surface-color: #44475a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(26, 27, 36, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* 轮播区域样式 */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(189, 147, 249, 0.3);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-btn.prev { left: 1rem; }
+.carousel-btn.next { right: 1rem; }
+
+.carousel-btn:hover {
+    background: rgba(189, 147, 249, 0.5);
+}
+
+/* 社交媒体链接样式 */
+.footer {
+    background: var(--footer-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: transform 0.3s;
+    opacity: 0.8;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* CSDN图标特殊样式 */
+.social-icon .fa-blogger {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
+.social-icon:hover .fa-blogger {
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: var(--footer-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .social-icon {
+        margin: 0 0.5rem;
+    }
+} 
+
+/* 主页按钮样式 */
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(189, 147, 249, 0.1);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+}
+
+.primary-btn:hover {
+    background: #50c5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(189, 147, 249, 0.2);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(189, 147, 249, 0.2);
+}
+
+/* 技能条样式 */
+.skills-container {
+    margin-top: 3rem;
+}
+
+.skills-container h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.skill-bars {
+    max-width: 600px;
+}
+
+.skill-bar {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.bar {
+    height: 10px;
+    background: rgba(248, 248, 242, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+    box-shadow: 0 0 10px rgba(139, 233, 253, 0.3);
+}
+
+/* 美化现有样式 */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.about-section {
+    padding: 5rem 2rem;
+    background: var(--surface-color);
+    color: var(--text-color);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primary-btn, .secondary-btn {
+        margin: 0.5rem 0;
+        width: 200px;
+    }
+} 
+
+/* 添加轮播图遮罩效果 */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(40, 42, 54, 0.7),
+        rgba(40, 42, 54, 0.5)
+    );
+    z-index: 1;
+}
+
+.carousel-item img {
+    filter: brightness(0.8);
+}
+
+.csdn-icon {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover .csdn-icon {
+    background: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
